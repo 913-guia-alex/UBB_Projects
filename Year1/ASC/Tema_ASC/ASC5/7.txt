@@ -1,0 +1,47 @@
+bits 32 
+global start
+
+
+extern exit 
+import exit msvcrt.dll  
+
+
+segment data use32 class=data
+
+;A string of doublewords is given. Obtain the list made out of the high bytes of the 
+;high words of each doubleword from the given list with the property that these bytes are multiple of 3
+
+
+s DD 12345678h, 1A2B3C4Dh, 1E98DC76h
+
+trei db 3
+lenS equ ($-s)
+
+segment code use32 class=code
+start:
+
+        mov esi , s
+        mov ecx , lenS
+        mov edx , 0
+        repeta : 
+
+                lodsw
+                lodsb 
+                lodsb ; al  = high part from high word 
+                mov AH , 0
+                div byte[trei]   ; we div the high part from high word to see if it is a multiple of 3
+                cmp AH , 0     ; we comapre if the remaining is 0
+                    mov [s+ESI] , AL ; we put in s the high part from high word if it's a multiple of 3
+                    inc ESI   ; increasing the ESI for furher use
+                jnz nonmultiplu
+                    inc ESI  ;  increasing the ESI for furher use
+                    nonmultiplu:
+       
+        loop repeta
+       
+       
+        
+    
+    
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

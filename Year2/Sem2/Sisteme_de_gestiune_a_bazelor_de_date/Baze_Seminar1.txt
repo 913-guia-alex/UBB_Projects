@@ -1,0 +1,159 @@
+Seminar1
+
+Help for the first homework::::::::::::::::::::::::::::
+
+ADO.NET(Tehnology)
+3 Homeworks C#
+
+
+The Data Cycle::::::::::::::::::::::::::::::::::::::::::
+
+DataBase -> Aplication(C#)(All code is written in the aplication)
+
+I. Connect to the Data (Aplication to the DataBase)
+     Two-way comunication between the Aplication and DataBase
+     Modify in the Aplication(See results in the DataBase)
+   
+II. Preparing the Aplication to Received Data
+      Tables + Relationships <--> DataSet
+      Datasets , entities , LINQ to SQL objects
+    
+III. Fetching Data into the Aplication (Bringing)
+        Brings the Data to the App
+        Execute queries and stored procedures (TableAdapters,
+        LINQ to Entities , direct connection between entities and 
+        stored procedures)
+
+IV. Displaying Data on Windows Forms
+       After getting the data we display it 
+       Data-Bound controls
+    
+V. a)Editing Data in the Aplication/ b)Validating Data
+      Insert , Update/Modify , Delete
+      Validation if it s correct(The insert , Update....)
+      Validation(Try/Catch)
+      
+VI. Saving Data
+      TableAdapterManager , SaveChanges
+
+
+Data Models::::::::::::::::::::::::::::::::::::::::::
+
+   Adobe.pdf (important)
+   Typed/ Untyped datasets
+   LINQ to SQL classes
+   Comceptual Model based on the Entity Data Model
+
+
+ADO.NET::::::::::::::::::::::::::::::::::::::::::::
+
+Look at the schema from pdf
+
+Data Provider(Conncetion,Command,DataReader + DataAdapter) <--> Data Set(DataRelationCollection,DataTableCollection,DataTable)
+	^
+	|
+	v
+      Data
+
+
+DataSet::::::::::::::::::::::::::::::::::::::::::
+
+|->System
+     |->Data
+	 |-> (continue here)
+
+a) Objects containing data tables that can temporarily store 
+b) data used in the aplication
+c) Type / Untyped
+d) Local in-memory cache
+
+
+DataTable includes: DataRowCollection , 
+		    DataColumnCollection,
+		    ConstraintCollection
+
+
+The DataSet Class:::::::::::::::::::::::::::::::::::::
+
+Properties:
+	a) Tables (DataBaseCollection)
+	b) Relations (DataRelationCollection) (Child/Parents tables)
+
+Methods:
+	a) Clear() 
+	b) HasChanged() - indicates if there are new/deleted/modified rows
+
+
+Data Provider::::::::::::::::::::::::::::::::::::::::::
+
+SQL Connection::::::::::::::::::::::::::::::::::::::::::
+
+Represents a connection to a SQL Server database
+Cannot be inherited
+Must ensure the connection is always closed
+
+Properties:
+	ConnectionString - String used to open a SQL Server Database
+			 - http:// www.connectionstrings.com/
+	ConnectionTimeout - time to wait to establish the connection
+   			    before terminating the attempt and generate an error
+	
+Methods:
+	Open()
+	Close()
+ 	
+If a SQLException is geenrated , the SqlConncetion remains
+open when the severity level <=19
+
+Data Provider -> Connection:::::::::::::::::::::::::::::::::::::::::::::::::
+
+	@
+	DATA SOURCE = "Server Name"
+	INITIAL CATALOG = "DB Name"(Gym_Final sau orice nume ai la database)
+	INTEGRATED SECURITY = TRUE
+
+
+Data Provider -> Command:::::::::::::::::::::::::::::::::::::::::::::::::::
+
+	Represents a Transact-SQL statement or stored procedure to be executed on a SQL Server DATABASE
+	Cannot be inherited
+	Properties:
+			CommandText
+			CommandTimeout
+	Methods:
+			ExecuteNonQuery(generic) - returns the number of affected rows
+			ExecuteScalar - returns the first column of the first row in the answer set
+			ExecuteReader - builds a SqlDataReader(reads a forward-only stream of rows
+								from a SQL Server Database)
+			
+Data Provider ->Data Adapter::::::::::::::::::::::::::::::::::::::::::::::::::::
+	
+	Bridge between a DataSet and SQL Server to optain data and save changes back to the database
+	A set of commands and a database connection
+	Properties:
+		UpdateCommand -> statement/stored procedure used to upate records in the DB Source
+		InsertCommand -> statement/stored procedure used to insert records in the DB Source
+		DeleteCommand -> statement/stored procedure used to delete records in the DB Source
+		
+	Methods:
+		Fill(DataSet,String) - adds or refreshes rows in the DataSet object to match those in the data
+					source(second parameter = name of the table)
+		Update(DataSet,String) - change the values in the DataBase by executing INSERT / UPDATE / DELETE
+					  statements for every added / modified / removed row 
+
+
+Console::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+	It represents the standard input , output , error streams for console application
+	Properties:
+		WindowLeft , WindowTop , WindowHeigth , WindowWidth , BackgroundColor , Title , etc...
+	Methods
+		Write(...) , WriteLine(...) , Read() , ReadLine() , ReadKey()
+
+
+
+USE THE "using System.Date.SqlClient;" at the top of the program of the database !!!!!!
+
+
+

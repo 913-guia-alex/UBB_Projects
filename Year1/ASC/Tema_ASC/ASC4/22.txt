@@ -1,0 +1,41 @@
+bits 32 
+global start
+
+
+extern exit 
+import exit msvcrt.dll  
+
+
+segment data use32 class=data
+
+;Two byte strings S1 and S2 of the same length are given. 
+;Obtain the string D where each element contains the minimum of the corresponding elements from S1 and S2.
+ 
+
+S1 db '1', '3', '6', '2', '3', '7'
+S2 db '6', '3', '8', '1', '2', '5'
+l equ $ - S1
+D times l db 0
+
+segment code use32 class=code
+start:
+
+    mov ECX , l ; we put the lenght l in ECX in order to make the loop
+    mov ESI , 0 ; for the loop
+    JECXZ endFor ; skip loop if l = 0
+    Repeta:
+            mov AL , [S1+ESI]        ; we move S1[ESI] in AL
+            mov BL , [S2+ESI]        ; we move  S2[ESI] in BL
+            cmp AL , BL              ; we compare the 2 variables
+            jbe check_if             ; we verify if AL is smaller or equal than BL 
+                mov [D+ESI] , BL     ; we move BL in D[ESI] 
+                inc ESI              ; we increase ESI
+            check_if:                ; else part
+                mov [D+ESI] , AL     ; we move AL in D[ESI] 
+                inc ESI              ; we increase ESI
+              
+    loop Repeta
+    endFor
+    
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

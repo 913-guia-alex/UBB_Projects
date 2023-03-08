@@ -1,0 +1,37 @@
+﻿  domain.c
+  dynamicArray.c
+  repository.c
+  service.c
+  ui.c
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(14,13): warning C4477: 'scanf_s' : format string '%[^\n]' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(14,13): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(15,13): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(15,13): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(16,13): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(16,13): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(30,13): warning C4477: 'scanf_s' : format string '%[^\n]' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(30,13): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(43,13): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(43,13): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(52,17): warning C4477: 'scanf_s' : format string '%[^\n]' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(52,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(53,17): warning C4477: 'scanf_s' : format string '%[^\n]' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(53,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(54,17): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(54,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(55,17): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(55,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(71,17): warning C4477: 'scanf_s' : format string '%[^\n]' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(71,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(72,17): warning C4477: 'scanf_s' : format string '%[^\n]' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(72,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(73,17): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(73,17): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(116,13): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(116,13): message : this argument is used as a buffer size
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(181,17): warning C4477: 'scanf_s' : format string '%s' requires an argument of type 'unsigned int', but variadic argument 2 has type 'size_t'
+C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\Project1\ui.c(181,17): message : this argument is used as a buffer size
+  undoRedo.c
+  Generating Code...
+  main.c
+  Project1.vcxproj -> C:\Users\Admin\Desktop\Anul1\ExamenFolderOOP\OOP_Lab2-3\x64\Debug\Project1.exe

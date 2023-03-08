@@ -1,0 +1,58 @@
+bits 32 ;asamblare și compilare pentru arhitectura de 32 biți
+; definim punctul de intrare in programul principal
+
+
+global start
+
+; declaram functiile externe necesare programului nostru 
+extern exit ; indicam asamblorului ca exit exista, chiar daca noi nu o vom defini
+import exit msvcrt.dll  ; exit este o functie care incheie procesul, este definita in msvcrt.dll
+        ; msvcrt.dll contine exit, printf si toate celelalte functii C-runtime importante
+
+
+; segmentul de date in care se vor defini variabilele 
+; Porblema 
+; c+(a*a-b+7)/(2+a), a-byte; b-doubleword; c-qword
+
+segment data use32 class=data
+;
+    a db 10h
+    b dd 10h
+    c dq 10h
+  
+
+; segmentul de cod
+segment code use32 class=code
+start:
+; 
+
+
+    mov AL , [a]
+    mul byte [a] ; AX will be a*a
+    mov DX,0
+    push dx
+	push ax
+	pop eax ;eax = a*a
+    sub eax , [b]
+    add eax , 7 ; eax = a*a-b+7
+    mov edx , 0 ; making space for qword
+    add eax , dword[c] ; the first part of c+(a*a-b+7)
+    adc edx , dword[c+4] ; the second part of c+(a*a-b+7)
+    mov ebx , eax ; 
+    mov ecx , edx ; we move the qword in another registers
+    mov AL , [a]
+    add AL , 2
+    mov AH , 0
+    mov DX , 0
+    push dx
+	push ax
+	pop ebx ; in ebx will have a+2
+    mov edx , ebx
+    mov eax , ecx ; in edx:eax will have c+(a*a-b+7)
+    idiv ebx ; EAX ← EDX:EAX / EBX for c+(a*a-b+7)/(2+a)
+      
+
+    
+    ; exit(0)
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

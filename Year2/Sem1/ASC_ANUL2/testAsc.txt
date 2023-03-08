@@ -1,0 +1,348 @@
+DIN FISIER IN CMD::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+; Se da un sir string intr-un fisier . 
+;Sa se zica cate literer mici si cate litere mari sunt in string
+
+bits 32
+
+global start        
+
+extern exit, printf, scanf, fopen, fclose, fread
+import exit msvcrt.dll
+import printf msvcrt.dll
+import scanf msvcrt.dll
+import fopen msvcrt.dll
+import fclose msvcrt.dll
+import fread msvcrt.dll
+
+segment data use32 class=data
+    input_descriptor dd -1
+    file_mode db "r", 0
+
+    file_prompt db "File name: ", 0
+    file_name times 256 db 0
+    
+    max_read_len equ 255
+    read_string times (max_read_len+1) db 0
+    read_format db "%s", 0
+
+    upper resd 1
+    lower resd 1
+    display_format db "Uppercase: %d, lowercase: %d", 0
+
+segment code use32 class=code        
+    start:
+        ; READ THE FILE NAME FROM THE CONSOLE
+        push dword file_prompt          ; push the file prompt
+        call [printf]                   ; print the file prompt
+        add esp, 4                      ; clean up the stack, 1 variable for printf
+        
+        push file_name                  ; push the file name variable
+        push read_format                ; push the reading format
+        call [scanf]                    ; read from console
+        add esp, 4 * 2                  ; clean up the stack, 2 variables for scanf
+
+        ; OPEN THE FILE
+        push dword file_mode            ; push the file mode
+        push dword file_name            ; push the file name
+        call [fopen]                    ; open the file
+        add esp, 4 * 2                  ; clean up the stack, 2 variables for fopen
+        
+        cmp eax, dword 0                ; check if the file exists
+        je quit                         ; if the file does not exist then end the program
+        mov [input_descriptor], eax     ; move the input descriptor to the variable
+        
+        ; READ THE FILE
+        push dword [input_descriptor]   ; push the input descriptor
+        push dword max_read_len         ; push the maximum length of read characters
+        push dword 1                    ; push the number of bytes per character
+        push dword read_string          ; push the variable that stores the read string
+        call [fread]                    ; read from the file
+        add esp, 4 * 4                  ; clean up the stack, 4 variables for fread
+        
+        ; CLOSE THE FILE
+        push dword [input_descriptor]   ; push the input descriptor
+        call [fclose]                   ; close the file
+        add esp, 4                      ; clean up the stack, 1 variable for fclose
+
+        ; COUNT THE UPPERCASE AND LOWERCASE LETTERS
+        mov dword [upper], dword 0      ; set the uppercase counter to 0
+        mov dword [lower], dword 0      ; set the lowercase counter to 0
+
+        mov esi, read_string
+        string_loop:
+            lodsb                       ; load the next byte from the string
+            cmp al, byte 0              ; compare al with the null char (terminator)
+            je loop_end                 ; if equal, stop counting
+            
+            cmp al, byte 65             ; compare al with the uppercase A
+            jl not_uppercase            ; if less, skip the uppercase counter
+            cmp al, byte 90             ; compare al with the uppercase Z
+            jg not_uppercase            ; if greater, skip the uppercase counter
+            inc dword [upper]           ; increment the uppercase counter
+            jmp string_loop             ; continue the loop
+            
+            not_uppercase:
+            cmp al, byte 97             ; compare al with the lowercase a
+            jl next_loop                ; if less, skip the lowercase counter
+            cmp al, byte 122            ; compare al with the lowercase z
+            jg next_loop                ; if greater, skip the lowercase counter
+            inc dword [lower]           ; increment the lowercase counter
+            jmp string_loop             ; continue the loop
+
+            next_loop:
+        jmp string_loop
+        
+        loop_end:
+        ; PRINT THE RESULTS
+        push dword [lower]             ; push the lowercase counter
+        push dword [upper]             ; push the uppercase counter
+        push dword display_format      ; push the display format
+        call [printf]                  ; print the results
+        add esp, 4 * 3                 ; clean up the stack, 3 variables for printf
+
+        quit:
+        push dword 0                    ; 0
+        call [exit]                     ; exit(0)
+
+
+DIN CMD IN FISIER::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+Read natural numbers until you reach 0. 
+Write in a file numbers separated by space that 
+are negative and have an odd number of bits set to 1
+
+
+
+bits 32
+
+global start        
+
+extern exit, fopen, fprintf, fclose, scanf
+import exit msvcrt.dll
+import fopen msvcrt.dll
+import fprintf msvcrt.dll
+import fclose msvcrt.dll
+import scanf msvcrt.dll
+
+segment data use32 class=data
+    file_name db "practicVedem.txt", 0
+    access_mode db "w", 0
+    fd resd 1
+    format db "%d", 0
+    format_w db "%d ", 0
+    found_one db 0
+    nothingfound db "There was no negative number with odd number of bits", 0
+    x resd 1
+    
+segment code use32 class=code
+    start:
+        push access_mode
+        push file_name
+        call [fopen]
+        add esp, 4*2
+        mov [fd], eax
+        cmp eax, 0
+        je final
+        
+        back:
+        push x
+        push format
+        call [scanf]
+        add esp, 4*2
+        cmp dword[x], 0
+        je pre_final
+        cmp dword[x], 0
+        jnl not_neg
+        
+        mov eax, [x]
+        mov ecx, 32
+        mov edx, 0
+        loop1:
+        mov ebx, eax
+        and ebx, 1
+        add edx, ebx
+        ror eax, 1
+        loop loop1
+        
+        test edx, 1
+        je not_neg
+        
+        push dword[x]
+        push format_w
+        push dword[fd]
+        call [fprintf]
+        add esp, 4*3
+        mov byte[found_one], 1
+        
+        not_neg:
+        jmp back
+        
+        pre_final:
+        cmp byte[found_one], 1
+        je nvm
+        push nothingfound
+        push dword[fd]
+        call [fprintf]
+        add esp, 4*2
+        nvm:
+        push dword[fd]
+        call [fclose]
+        add esp, 4*1
+        final:
+        push    dword 0
+        call    [exit]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DIN FISIER IN FISER::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+bits 32
+
+; Sa se citeasca de la tastatura numele a doua fisiere, cel de input si de output. Sa se inlocuiasca toate cifrele din primul fisier cu cifra consecutiva. Rezultatul se va tipari intr-un nou fisier de output care va avea numele citit de la tastatura.
+
+; Se citeste: Maria are 2 vaze si 4 flori.
+; Rezultat: Maria are 3 vaze si 5 flori.
+
+
+global start        
+
+extern exit, scanf,printf, fopen,fclose, fscanf , fprintf
+import exit msvcrt.dll
+import scanf msvcrt.dll
+import printf msvcrt.dll
+import fprintf msvcrt.dll
+import fopen msvcrt.dll
+import fclose msvcrt.dll
+import fscanf msvcrt.dll
+
+segment data use32 class=data
+
+    FileHandler resd 1
+    FileHandler2 resd 1
+    NameOfTheFile resb 15
+    NameOfTheFile2 resb 15
+    StringFormat db "%s",0
+    AccesMode db "r",0
+    AccesMode2 db "w" , 0
+    CharacterFormat db "%c",0
+    theCaharacter db 0
+    FormatString db "The String is %s",0
+    Message1 db "Name of the file 1 : ",0
+    Message2 db "Name of the file 2 : ",0
+    
+segment code use32 class=code
+    start:
+    
+        push dword Message1
+        call [printf]
+        add esp , 4*1
+    
+        push dword NameOfTheFile
+        push dword StringFormat
+        call [scanf]
+        add esp, 4*2
+        
+        push dword AccesMode
+        push dword NameOfTheFile
+        call [fopen]
+        add esp, 4*2
+        
+
+        mov [FileHandler], eax
+
+        .Loop:
+        
+        push dword theCaharacter
+        push dword CharacterFormat
+        push dword [FileHandler]
+        call [fscanf]
+        add esp, 4*3
+        
+        cmp eax, -1
+        je .EndOfLoop
+        
+        mov al, [theCaharacter]
+        
+        cmp al , '0'
+        jb .EndOfNumbers0to8
+        
+        cmp al , '8'
+        ja .EndOfNumbers0to8
+        
+        add al , 1     
+        
+        .EndOfNumbers0to8:
+        
+        cmp al , '9'
+        jne .EndOfNumbers
+        
+        sub al, 9
+        .EndOfNumbers:
+        
+        jmp .Loop
+        .EndOfLoop:
+        
+        push dword Message2
+        call[printf]
+        add esp , 4*1
+        
+        push dword NameOfTheFile2
+        push dword StringFormat
+        call [scanf]
+        add esp, 4*2
+        
+        push AccesMode2
+        push NameOfTheFile2
+        call [fopen]
+        add esp , 4*2
+        
+        mov [FileHandler2] , eax
+        
+        push dword [FileHandler2]
+        call [fprintf]
+        add esp, 4*1
+        
+        push    dword 0      
+        call    [exit]       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+map-> mapping pe un domain;
+mapcar -> ia primul element si aplica functia pe celelalte elemnte
+#-> semnaleaza ca urmaeza o functie nu o lista de valori

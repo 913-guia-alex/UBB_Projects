@@ -1,0 +1,101 @@
+LAB 4 TEMA : TESTS
+
+HOW MUCH DOES IT TAKES TO RUN A DELETE/INSERT 
+
+The script how to make these -> lab4 pe site la final
+
+8 test tables -> 
+
+Shops ->  Table with a single-column primary key and no foreign keys;
+ShopTeas -> Table with a multicolumn primary key
+Teas ->Table with a single-column primary key and at least one 
+foreign key
+
+
+
+Views for the tables above selected
+
+
+We put the 3 tables in the table table
+We put the 3 views in the views table
+
+For the Tests table -> Delete test , Select test , Insert test
+			if you want
+
+TestTable -> The junction between the Test table and the Table table
+		TestID,TableID,Position(In which order we test the table(delete/insert etc..))
+		NoOfRows(How many rows we want to test (Delete/insert etc..))
+			can be the same or diferent depending of the table
+			
+		
+TestView -> The juncgion between the Test table and the View table
+		TestID,ViewID	
+	
+(TestTable , TestView many to many relationship)
+
+
+Example for DELETE(be careful for the order of deletion) -> Lab4Teams
+Example for View -> Lab4Teams
+Example for Insert for all the tables ->Lab4Teams:::
+
+!!!Foreign key should not be hard coded(don't put random value for the foreign key 
+					because it might not exists)!!!
+
+
+!!!Might use other tables when we work with the 3 selected tables!!!
+
+crossed join/cartezian product(for the ShopTeas Table)
+
+
+
+THE REAMINING 3 TEST TABLES BELOW 
+
+
+Delete/Insert/Select(Evaluate) in this order(for the TestRun tables)
+First table is TestRuns 
+
+
+
+
+
+
+
+-------INCEPUT EXERCITII EXAMEN----------------------------------------------
+
+
+
+2 Parts for the parctical test
+
+I -> 3 questions - 1p/question
+
+II -> Create a dataBase + StoreProcedure + View + Function
+See Seminar6***
+
+
+------LAB 5 AJUTOR------------------------------------------------------------
+
+
+Inedexes
+
+3 Existing tables with the specified format
+
+See Lab5***
+
+
+SELECT , CREATE , SELECT in this order
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

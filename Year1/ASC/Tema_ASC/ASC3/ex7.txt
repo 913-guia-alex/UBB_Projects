@@ -1,0 +1,51 @@
+bits 32 
+global start
+
+
+extern exit 
+import exit msvcrt.dll  
+
+
+segment data use32 class=data
+
+;a/2+b*b-a*b*c+e-x
+
+A DW 1001001110100101b
+B DW 0010100101001010b
+C DD 0
+E DW 0000000001100101b 
+
+
+
+segment code use32 class=code
+start:
+
+    mov CX , 0 ; we compute the rezult in CX
+    mov DX , 0 ; we compute the rezult in CX
+    
+    or DX , 0000000000001111b ; we isolate the 0-4 bites
+    
+    mov AX , [A]
+    and AX , 0000000000111111b ; we keep the 0-6 bits
+    mov CL , 5
+    ror AX , CL ; we rotate 5 positions to the right
+    or DX , AX ; 5-11 bits in DX occupied with 0-6 bits from AX
+    
+    mov AX , [B]
+    and AX , 0000111100000000b ; we keep the 8-11 bits
+    mov CL , 4
+    ror AX , CL ; we rotate 4 positons to the right 
+    or DX , AX ; 12-15 bits in DX occupied with 8-11 bits from AX
+   
+   
+    mov AX , [E]
+    or CX , AX ; 0-15 bits in CX occupied with 0000000001100101b bits from AX
+    
+    push DX
+    push CX
+    pop EAX ; in EAX we have 0-31 bits
+    
+    mov [C] , EAX ; we move the result from the register to the result variable
+  
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

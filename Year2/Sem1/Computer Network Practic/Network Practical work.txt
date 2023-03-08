@@ -1,0 +1,217 @@
+
+Calcule Folosite pentru a intelege mai bine:::::
+
+
+Criptare Adresa :
+
+32bits = 4 * 8 bits
+
+for me :
+
+IP : 9.194.102.0
+
+Mask: 255.255.254.0 (/23)
+
+Sub networks:
+N1: 104 IP's
+N2: 48 IP's
+N3: 40 IP's
+N4: 40 IP's
+N5: 8 IP's 
+
+2^9 = 512
+(IP) AND (NM) = NA 
+(IP) OR (NOR (NM)) = BA
+
+DETERMINE NA:
+
+9.194.102.0  AND 255.255.254.0
+
+9 AND 255 -> 9
+194 AND 255 -> 194
+102 AND 254 -> 01100110 AND
+	       11111110 WILL BE 01100110 
+		WHICH IS 102 
+0 AND 0 -> 0
+
+9.194.102.0 -> NA
+
+
+DETEMINE BA:
+
+9.194.102.0  OR (NOT(255.255.254.0)
+
+NOT(255.255.254.0) -> 0.0.1.255
+
+9.194.102.0 OR 0.0.1.255
+
+9 OR 0 -> 9
+194 OR 0 -> 194
+102 OR 1 -> 01100110 OR 00000001 WILL BE
+	    01100111 WHICH IS 103
+0 OR 255 -> 255
+
+
+9.194.103.255 -> BA
+
+[NA,BA] THE INTERVAL ->
+-> [9.194.102.0 , 9.194.103.255] -> 
+
+BA = BROADCAST ADRESS
+NA = NETWORK ADRESS 
+Size = 2^x ( x being the number of zeros from netmask(NM)) = 9
+     = 2^9 -> 512
+
+WHEN REFERING TO A NETWORK -> PAIR NA/NM
+
+for us -> 9.194.102.0/23
+
+[NA................BA] AND NM
+[NA1...BA1][NA2...BA2] AND NM+1
+
+for us :
+
+9.194.102.0/23
+[9.194.102.0.........9.194.103.255]
+
+/23 -> 11111111.11111111.11111110.00000000=
+	= 255.255.254.0
+23+1=24
+/24 -> 11111111.11111111.11111111.00000000=
+	= 255.255.255.0
+
+[9.194.102.0...9.194.102.255][9.194.103.0...9.194.103.255]
+size 24 -> 2^8 -> 256
+
+
+
+NM , NA , BA FOR ALL THE IPS
+
+NM = /(32-x) x being the number of 0's form the binery representation
+NA = IP AND NM
+BA = IP OR (NOT NM)
+
+for us:
+
+we have 5 adresses ->   N1: 104 IP's
+			N2: 48 IP's
+			N3: 40 IP's
+			N4: 40 IP's
+			N5: 8 IP's 
+
+
+N1 = 104 IP's
+104 devices
+NA and BA cannot be used -> 104+2=106
+size = 2^x -> size is a power of 2
+106<=128=2^7
+-> 7 zero's and 25 one's -> 
+	11111111.11111111.11111111.100000000
+NM = /25 = 255.255.255.128
+IP = 9.194.102.0
+
+NA = 9.194.102.0 AND 255.255.255.128 = 
+	= 9.194.102.0
+BA = 9.194.102.0 OR (NOT 255.255.255.128)
+	= 9.194.102.0 OR 0.0.0.127
+	= 9.194.102.127
+
+[9.194.102.0.......9.194.102.127] -> 2^7 IP
+
+So for 104 IP's 2^7/25
+
+
+
+For our network we ll have
+
+N1 , N2 , N3 , N4 , N5
+But also :
+N1234 -> 4 IP's
+N45 -> 2 IP's
+N5W -> 2 IP's (5 and Wireless Router)
+
+
+
+
+
+
+
+Project Start:::::::::: from Guia Alex , Group 923
+
+
+
+
+
+Sub Networks:
+
+N1: 104 IP's
+N2: 48 IP's
+N3: 40 IP's
+N4: 40 IP's
+N5: 8 IP's 
+
+Extra Networks:
+
+N1234 -> 4 IP's
+N45 -> 2 IP's
+N5W -> 2 IP's (5 and Wireless Router)
+
+Network IP : 9.194.102.0
+
+Mask:  255.255.254.0 (/23) -> x = 32-23 = 9(zero's)
+	-> 2^9 = 512 IP Adresses
+
+n devices(IP)+1 router + 1 NA + 1 BA -> n+3
+
+N1: 104+3 = 107<=128 = 2^7/25
+N2: 48+3 = 51<=64 = 2^6/26
+N3: 40+3 = 43<=64 = 2^6/26
+N4: 40+3 = 43<=64 = 2^6/26
+N5: 8+3 = 11<=16 = 2^4/28
+
+
+For the remaining 3 networks we don't use a router
+so we just add 2
+
+N1234: 4+2 = 6<=8 = 2^3/29
+N45: 2+2 = 4<=4 = 2^2/30
+N5W: 2+2 = 4<=4 = 2^2/30
+
+
+4+4+8+16+64+64+64+128 = 352<512(Used)
+
+See Spliting recursive drawing**
+
+(IP) AND (NM) = NA -> NA = 9.194.102.0
+(IP) OR (NOR (NM)) = BA -> BA = 9.194.103.255
+
+The first 256 adresses will be 9.194.102.___
+The last 256 adresses will be 9.194.103.____
+
+
+Recursive network spliting:::
+
+[0.........511] -> [0......255][256......511]
+[0...127][128...255][256...383][384...511]
+   N1
+[128...191][192...255][256...319][320...383][384...447][448...511]
+     N2         N3         N4
+[320...351][352...383]
+[320...335][336...351][352...367][368...383]
+     N5
+[336...343][344...351][352...359][360...367]
+    N1234
+[344...347][348...351][352...355][356...359]
+    N45         N5w
+
+
+Enumeration of the network:
+
+N1 = 9.194.102.0 /25      255.255.255.128  R1=.1 ; S1=.2
+N2 = 9.194.102.128 /26	  255.255.255.192  R2=.27 ; Sweb=.28
+N3 = 9.194.102.192 /26	  255.255.255.192  R3=.193 ; Sdns=.194
+N4 = 9.194.103.0 /26	  255.255.255.192  R4=.1
+N5 = 9.194.103.64 /28	  255.255.255.240  R5=.65
+N1234 = 9.194.103.80 /29  255.255.255.248  R1=.81 ; R2=.82 ; R3=.83 ; R4=.84
+N45 = 9.194.103.88 /30	  255.255.255.252  R4=.89 ; R5=.90
+N5w = 9.194.103.92 /30    255.255.255.252  R5=.93 ; Rw=.94

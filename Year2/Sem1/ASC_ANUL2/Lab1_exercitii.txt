@@ -1,0 +1,30 @@
+Adition
+
+a db 5
+b dw 11 22h
+|
+|
+05 22 11 00 -> in memory
+
+mov eax , 2 -> 0000 0000....0002
+add eax , [a] -> 00 11 22 05 (takes what has in a and then goes to the next variable[b])
+
+Multiplication
+
+Mul op1 : EAX
+|
+|--byte -> al*op1 = AX
+|
+|--word -> AX*op1 = DX:AX
+|
+|--dword -> EAX*op1 = EDX:EAX
+
+Division
+
+Div op1 
+|
+|--byte : AX:op1 -> AH(cat) ; AL(rest)
+|
+|--word : (DX:AX):op1 -> DX(cat) ; AX(rest)
+|
+|--dword : (EDX:EAX):op1 -> EDX(cat) ; EAX(rest)

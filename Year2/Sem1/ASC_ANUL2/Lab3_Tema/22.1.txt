@@ -1,0 +1,55 @@
+bits 32 
+global start
+
+
+extern exit 
+import exit msvcrt.dll  
+
+
+segment data use32 class=data
+
+;(d+c)-(c+b)-(b+a) Unsigned Reprezentation
+
+a DB 5h 
+b DW 11001001h 
+c DW 11011100h 
+d DQ 2h 
+
+
+segment code use32 class=code
+start:
+
+mov EBX , dword[d+0]
+mov ECX , dword[d+4]
+mov EAX , [c]
+mov EDX , 0
+add EBX , EAX ; EBX are prima parte din d+c
+adc ECX , EDX ; ECX are a doua parte din d+c
+mov AX , [b]
+mov DX , 0
+push DX
+push AX
+pop EDX
+add EAX , EDX ; in EAX am adunarea c+b
+mov BX , [b]
+mov AL , [a]
+mov AH , 0
+add AX , BX ; in AX avem b+a 
+mov EDX , 0
+sub EBX , EAX ; in EBX avem prima parte din (d+c)-(c+b)
+sbb ECX , EDX ; in ECX avem a doua parte din (d+c)-(c+b)
+mov DX , 0
+push AX
+push DX 
+pop EDX ; in EDX avem b+a
+mov EAX , 0
+sub EBX , EDX ; in EBX avem prima parte din (d+c)-(c+b)-(b+a)
+sbb ECX , EAX ; in ECX avem a doua parte din (d+c)-(c+b)-(b+a)
+
+
+
+
+
+  
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

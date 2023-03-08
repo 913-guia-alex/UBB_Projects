@@ -1,0 +1,253 @@
+Execution stack: 
+[(string varf; (varf = "test.txt"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))))]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(varf = "test.txt"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(varf = "test.txt"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(varf = "test.txt"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))))]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(varf = "test.txt"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))))]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.txt"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.txt"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))]
+Symbol table: 
+{varf="test.txt"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))]
+Symbol table: 
+{varf="test.txt"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))), open(varf)]
+Symbol table: 
+{varf="test.txt"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))), open(varf)]
+Symbol table: 
+{varf="test.txt"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(string varf; (varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))))]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))))]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))))]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))), open(varf)]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))), open(varf)]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+

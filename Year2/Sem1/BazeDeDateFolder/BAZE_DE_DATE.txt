@@ -1,0 +1,33 @@
+SQL -> Data Manipulation Language
+
+DLL
+DML
+SELECT
+
+SELECT *NameOfTheField (if we put star it means all the fields)
+FROM TableName
+
+Q1 -> find the 21-years old students in the Student table
+
+SELECT *
+FROM Students S
+WHERE S.age = 21
+
+Q2 -> find the name and email adress of all the 21-year old
+	students in the Student table . Eliminate duplicates
+
+SELECT DISTINCT S.name , S.email
+FROM Students S
+WHERE S.age = 21
+
+Q3 -> Names that start with A
+
+Name LIKE 'A%' -> starting with A
+Name LIKE '%A' -> finishing with A
+Name LIKE '%A%' -> in the name is an A
+
+
+Union/Intersect/Except
+
+
+

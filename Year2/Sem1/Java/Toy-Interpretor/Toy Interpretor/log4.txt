@@ -1,0 +1,780 @@
+Id:4
+Execution stack: 
+[(string varf; (varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))))]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(varf = "test.in"; (open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf)))))))), string varf]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(open(varf); (int varc; (read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))))), varf = "test.in"]
+Symbol table: 
+{varf=""}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(read(varf, varc); (print(varc); (read(varf, varc); (print(varc); close(varf))))), int varc]
+Symbol table: 
+{varf="test.in"}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[(print(varc); close(varf))]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+
+Id:4
+Execution stack: 
+[]
+Symbol table: 
+{varf="test.in", varc=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[0, 0]
+

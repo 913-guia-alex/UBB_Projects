@@ -1,0 +1,83 @@
+Intro to Web Apps and REST API's:::::::::::
+
+Grading:
+	Week 1-4 : 4points
+	Week 5-8 : 2points
+	Week 9-12: 2 points
+	Week 13-14: 1 point
+	Exam : Up to 3 points(1theory , 2practice)
+
+At least 5 points to pass
+Not a fundament subject
+
+
+Web Aplication VS Websites::::::::::::::::::
+
+Backend , Frontend , Database , Deployment,Security
+Working in teams
+
+Start with Backend frameworks
+We will create a REST APIs that will be consumed
+	by a frontend
+
+Entity:
+	-id , a1 , a2 , a3 , a4 , a5
+Open postmen
+GET: http://localhost:4300/entity
+	-Should return an array/list of my entities
+EX:
+	[
+		{
+			id:1,
+			a1:vsbi,
+			a2:vreg,
+			a3:btr,
+			a4:aswd,
+			a5:bters,
+		},
+		{
+			id:2,
+			a1:vcreh,
+			a2:nfg,
+			a3:asfd,
+			a4:ujhgdfg,
+			a5:sdghfth
+		}
+	]
+
+
+POST: http://localhost:4300/entity
+
+		{
+			id:2,
+			a1:vcreh,
+			a2:nfg,
+			a3:asfd,
+			a4:ujhgdfg,
+			a5:sdghfth
+		}
+
+REST API(Read about it)
+https://restfulapi.net/
+
+How to write code::::::::::::::::::::::::::::
+
+Web App / REST API library from Python
+	Django and Django Rest Framework
+	install postman to work with API
+
+MVC/MVT(Model View Controller , Model View Template)
+	Model -> domain entities and they store the data between the server and the client
+	View(Templates in Django) presentation layer and handle user interaction logic
+	Controllers(views in Django) handle the code that gets executed when a route is requested by the client
+	(www.example.com/students)
+
+https://www.djangoproject.com/
+https://www.django-rest-framework.org/
+
+Request and responses(Tutorial 2)
+
+Pentru Java - Spring and Spring Boot
+https://spring.io/ (Poti incerca , pare mai usor si cam gata facut)
+guides/tutorial/rest
+

@@ -1,0 +1,15 @@
+pkg load statistics
+n = input('Nr of trials');
+p = input('Prob of a succes');
+x=0:n;
+px=binopdf(x,n,p);
+plot(x,px,'+');
+xx=0:0.1:n;
+fx=binocdf(xx,n,p);
+plot(xx,fx,'-');
+N=1000;
+C=rand(3,N);
+D=(C<0.5);
+X=sum(D);
+clf;
+hist(X);

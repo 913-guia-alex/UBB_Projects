@@ -1,0 +1,33 @@
+bits 32 
+global start
+
+
+extern exit 
+import exit msvcrt.dll  
+
+
+segment data use32 class=data
+
+;c-(d+d+d)+(a+b)
+
+a DB 5h 
+b DB 7h 
+c DB 8h 
+d DB 2h 
+
+
+segment code use32 class=code
+start:
+
+  mov AL , [d]
+  mov DH , 3h
+  mul DH 
+  mov DX , [a]
+  mov BX , [b]
+  add DX , BX 
+  mov AX , [c]
+  sub AX , AX
+  add AX , DX 
+  
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

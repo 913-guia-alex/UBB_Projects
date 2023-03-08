@@ -1,0 +1,48 @@
+SEMINAR 1:
+
+class Person{
+
+}
+
+Person p = new Person()
+
+p------>[new person][][][] -> heap
+
+p = new Person()
+
+it removes the first pointer and creates a new one
+
+System.gc() // ceanes the memory
+
+
+
+class Teacher extends Person{
+	void teach(){
+		}
+
+}
+
+p = new Teacher()
+
+
+INTERFACE:
+
+
+interface Shape{
+	
+	int getSides(),
+	int value=300,
+	default int surface(){
+		return 60,
+			     }
+
+
+}
+
+class Square implements Shape
+
+
+
+
+
+

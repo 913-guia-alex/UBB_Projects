@@ -1,0 +1,40 @@
+bits 32 ;asamblare și compilare pentru arhitectura de 32 biți
+; definim punctul de intrare in programul principal
+
+;(c+b+a)-(d+d)
+
+global start
+
+; declaram functiile externe necesare programului nostru 
+extern exit ; indicam asamblorului ca exit exista, chiar daca noi nu o vom defini
+import exit msvcrt.dll  ; exit este o functie care incheie procesul, este definita in msvcrt.dll
+        ; msvcrt.dll contine exit, printf si toate celelalte functii C-runtime importante
+
+
+; segmentul de date in care se vor defini variabilele 
+; Porblema 
+
+segment data use32 class=data
+;
+    a dw 10h
+    b dw 10h
+    c dw 10h
+    d dw 10h
+
+; segmentul de cod
+segment code use32 class=code
+start:
+; 
+    mov AX , [a]
+    add AX , [b] 
+    add AX , [c] ; (c+b+a)
+    
+    mov BX , [d]
+    add BX , [d] ; (d+d)
+    
+    sub AX , BX ; (c+d+a)-(d+d)
+    
+
+    ; exit(0)
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

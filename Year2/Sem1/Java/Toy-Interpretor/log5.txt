@@ -1,0 +1,231 @@
+Execution stack: 
+[(int a; (int b; (a = 5; (b = 7; if(a > b) then(print(a)) else(print(b))))))]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int b; (a = 5; (b = 7; if(a > b) then(print(a)) else(print(b))))), int a]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int b; (a = 5; (b = 7; if(a > b) then(print(a)) else(print(b))))), int a]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int b; (a = 5; (b = 7; if(a > b) then(print(a)) else(print(b)))))]
+Symbol table: 
+{a=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int b; (a = 5; (b = 7; if(a > b) then(print(a)) else(print(b)))))]
+Symbol table: 
+{a=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = 5; (b = 7; if(a > b) then(print(a)) else(print(b)))), int b]
+Symbol table: 
+{a=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = 5; (b = 7; if(a > b) then(print(a)) else(print(b)))), int b]
+Symbol table: 
+{a=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = 5; (b = 7; if(a > b) then(print(a)) else(print(b))))]
+Symbol table: 
+{a=0, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = 5; (b = 7; if(a > b) then(print(a)) else(print(b))))]
+Symbol table: 
+{a=0, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(b = 7; if(a > b) then(print(a)) else(print(b))), a = 5]
+Symbol table: 
+{a=0, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(b = 7; if(a > b) then(print(a)) else(print(b))), a = 5]
+Symbol table: 
+{a=0, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(b = 7; if(a > b) then(print(a)) else(print(b)))]
+Symbol table: 
+{a=5, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(b = 7; if(a > b) then(print(a)) else(print(b)))]
+Symbol table: 
+{a=5, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[if(a > b) then(print(a)) else(print(b)), b = 7]
+Symbol table: 
+{a=5, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[if(a > b) then(print(a)) else(print(b)), b = 7]
+Symbol table: 
+{a=5, b=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[if(a > b) then(print(a)) else(print(b))]
+Symbol table: 
+{a=5, b=7}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[if(a > b) then(print(a)) else(print(b))]
+Symbol table: 
+{a=5, b=7}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(b)]
+Symbol table: 
+{a=5, b=7}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(b)]
+Symbol table: 
+{a=5, b=7}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[]
+Symbol table: 
+{a=5, b=7}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[7]
+
+Execution stack: 
+[]
+Symbol table: 
+{a=5, b=7}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[7]
+

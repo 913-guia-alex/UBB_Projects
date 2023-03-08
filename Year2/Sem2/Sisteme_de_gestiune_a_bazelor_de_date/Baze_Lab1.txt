@@ -1,0 +1,7 @@
+Labs:
+
+Lab1 -> week5
+Lab2 -> week7
+Lab3 -> week11
+Practical Test: -> week13
+

@@ -1,0 +1,55 @@
+a db 4
+b db 8
+c dw 1122
+
+mov ax,[a] -> ax=0804
+add ax,[c] -> ax=22110804
+
+
+
+
+
+
+a dd 11 22 33 44 h
+b dd 0FF EE FF 99 h
+
+reprezentarea pe stack: 44 33 22 11 99 FF EE FF
+
+mov ax , [a] ; ax = 33 44 h
+mov bx , [a+2] ; bx = 11 22 h
+mov cx , [b] ; cx = FF 99 h
+mov dx , [b+2] ; dx = FF EE h
+
+add ax , cx ; 
+adc bx , dx ;
+
+
+
+
+
+
+a dw 12 h
+d dw 3 h
+
+mov bl , 5 ; 05 h
+mov ax , [a] ; 00 12 h
+div bl	     ; ax = 02 02 (primul e de la cat iar al doilea 02 e de la rest)  
+add ax , [d] ; ax = 02 05
+div 3 ; we can't devide by values!!!
+
+
+
+
+
+a dw 1102 h
+b dw 3
+mov bl , 3 ; 03
+mov ax , [a] ; ax = 11 02 h
+mul bl ; ax = 00 06 h ( deoarece inmulteste cu bl care e byte si pune inmultirea doar in byte , ce e in fata se sterge -> 00 06)
+mov dx , [3] ; we can't move with the parantesis ; dx =00 03(daca ar fi fara paranteze)
+mul dx ; ; dx:ax -> 00 00 : 00 12(12 care e 6*3 in hexa)
+add dx , 4 ; dx = 00 04
+mov cx , 2 ; cx = 00 02
+div cx ; dx:ax/cx -> 00 04:00 12/00 02 -> 00 04 00 06 (care e overflow pentru ca nu incape intr un word)
+
+

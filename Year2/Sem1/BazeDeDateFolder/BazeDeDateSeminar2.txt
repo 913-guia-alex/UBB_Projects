@@ -1,0 +1,81 @@
+Stored procedures :
+
+it is executed like this : EXEC <SPName>
+
+in the database -> programability -> stored procedures (for the template)
+
+
+example of a easy stored procedure:
+
+CREATE PROCEDURE uspStudentsNames
+AS
+	SELECT sname
+	FROM Students
+GO
+EXEC uspStudentsNames
+
+
+you create a procedure like the one above and then
+executed with EXEC or EXECUTE
+
+
+ALTER PROCEDURE uspNameStudents(@age INT) // which means that the procedure uspNameStudents is rewritten as the one below
+AS
+SELECT sname
+FROM Students
+WHERE age = @age
+GO
+
+
+EXEC uspNameStudents 20
+
+
+
+CREATE PROCEDURE uspNoOfStudents(@age INT , @NoStd INT OUTPUT) //for the thing we want to return
+AS						|
+	SELECT @NoStd = COUNT(*)		|
+	FROM Students				|
+	WHERE age = @age			|
+GO						|
+						|
+DECLARE @NoStd INT ----------|			|
+SET @NoStd = 0		     v		v--------
+EXEC uspNoOfStudents 20 , @NoStd = @NoStd OUTPUT
+PRINT @NoStd
+
+
+
+RAISERROR ({msg_id|msg_str|@local_val} {,severity_state})
+
+not all parameters are mandatory
+
+EX : ('There are no students of the specified age.' ,10,1)
+
+
+
+RAISERROR (N'This is message %s %d.' ,
+		10, -- Severity
+		1, -- state
+		N'number', -- %s string
+		10 -- %d int 
+	)
+-- Will print out -> This is message number 10
+
+select * from students (to see all the fields from the table students)
+
+
+
+
+
+
+Dynamic Execution :
+
+EXEC (<command>)
+
+EX : EXEC('SELECT sid , cid FROM Exams WHERE sid ='1') 
+     GO   -- we put the statement in the EXEC
+
+
+
+
+

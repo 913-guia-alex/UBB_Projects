@@ -1,0 +1,58 @@
+bits 32 ;asamblare și compilare pentru arhitectura de 32 biți
+; definim punctul de intrare in programul principal
+
+
+global start
+
+; declaram functiile externe necesare programului nostru 
+extern exit ; indicam asamblorului ca exit exista, chiar daca noi nu o vom defini
+import exit msvcrt.dll  ; exit este o functie care incheie procesul, este definita in msvcrt.dll
+        ; msvcrt.dll contine exit, printf si toate celelalte functii C-runtime importante
+
+
+; segmentul de date in care se vor defini variabilele 
+; Porblema 
+; (a+b*c+c)/(2+a)+e+x; a,b-byte; c-word; e-doubleword; x-qword
+segment data use32 class=data
+;
+    a db 10h
+    b db 10h
+    c dw 10h
+    e dd 10h
+    x dq 10h
+  
+
+; segmentul de cod
+segment code use32 class=code
+start:
+; 
+
+
+    mov AL , [b]
+    cbw ; AX will be b
+    mov DX , AX
+    mov AX , [c]
+    mul DX ;DX:AX ← AX * DX ; b*c
+    push DX 
+    push AX
+    pop EAX ; eax will have b*c
+    add EAX , [a]
+    add EAX , [c]
+    mov AL , [a]
+    add AL , 2
+    cbw ; AX will be a+2
+    mov SI , AX
+    div SI ; AX ← DX:AX / SI  which is (a+b*c+c)/(2+a)
+    cwde ; AX will be EAX
+    add eax , [e]
+    cdq ; in edx:eax will be (a+b*c+c)/(2+a)+e
+    add edx , dword[x]
+    adc eax , dword[x+4] ; in edx:eax will be (a+b*c+c)/(2+a)+e+x
+    
+    
+        
+
+    
+    ; exit(0)
+    push dword 0 ; se pune pe stiva parametrul functiei exit
+    call [exit] ; apelul functiei exit pentru terminarea executiei programului

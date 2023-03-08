@@ -1,0 +1,54 @@
+Lisp , Prolog 
+		- n*factorial(n-1) if n>1 // recursive formula
+factorial(n) = |
+		- 1 if n==1 or n==0 // base case
+
+Multiply the elements of a list with a constant value:
+
+[1,2,3] ; k=2 --> [2,4,6]
+
+L=l1,l2...ln
+
+
+			-empty set , if L = 0
+Mulk(l1,l2...ln ; k) = |
+			-{l1*k} reunion Mulk(l2,l3...ln) , otherwise
+
+In SWISH programing:
+
+%mulk(L -list, K -number, R -result list)
+%flow model(i,i,o)
+
+mulk([],_,[])
+mulk([H|T],K,[HR|TR]):-
+	HR is H*K,
+	mulk(T,K,TR).
+
+
+INPUT: mulk([1,2,3] , 2 , R).
+
+
+
+
+
+
+
+
+
+L = 1,2,2,3,4,2,1,4,2,7
+E=2
+
+1. L = 2,2,3,4,2,1,4,2,7 and return 1
+2. L = 2,3,4,2,1,4,2,7
+3. L = 3,4,2,1,4,2,7
+4. L = 4,2,1,4,2,7 and return 3
+5. L = 2,1,4,2,7 and return 4
+6. L = 1,4,2,7
+7. L = 4,2,7 and return 1
+8. L = 2,7 and return 4
+9. L = 7
+10. L = 0 and return 7
+
+
+
+

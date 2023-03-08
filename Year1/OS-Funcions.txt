@@ -1,0 +1,28 @@
+
+Code :
+
+:wq
+:set number
+vi matrix-from-text.c
+gcc -Wall -g -o matrix-from-text matrix-from-text.c
+valgrind ./matrix-from-text matrix.txt
+man something 
+
+
+mkdir grep --> creem un directory cu numele "grep"
+cd grep/ --> accescam directory ul cu numele de "grep"
+grep --> cautare de linii cu un anumit text intr un fisire
+grep Alex /etc/passwd --> ia toate liniile din fisier care contin numele Alex din fisierul /etc/passwd
+grep -i Alex /etc/passwd --> ia toate liniile care contin numele Alex din fisier fara sa conteze
+			     daca e cu litera mare sau nu
+grep -v Alex /etc/passwd --> ia toate liniile din fisier care NU contin Alex
+grep -c Alex /etc/passwd --> numara de cate ori apare Alex in fisier
+grep -n Alex /etc/passwd --> afiseaza linia in care apare cuvantul Alex
+grep gr913 /etc/passwd | cut -d : -f1,5 --> creeaza un tabel ( cut -d) unde se pot vedea 
+					    doar fildurile f1 si f5
+
+
+./[nume fisier] -> run it
+nano [nume fisier] -> create a file / accessing it
+chmod 755 [nume fisier] -> obligatoriu pentru toate fisierele create
+mkdir [nume shell directory] -> vcreare shell directory

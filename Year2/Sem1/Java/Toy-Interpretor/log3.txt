@@ -1,0 +1,483 @@
+Execution stack: 
+[(bool a; (int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v)))))]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v)))), bool a]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v)))), bool a]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v))))]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v))))]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v))), int v]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v))), int v]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v)))]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v)))]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v)), a = true]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v)), a = true]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v))]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v))]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(v), if(a) then(v = 2) else(v = 3)]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(v), if(a) then(v = 2) else(v = 3)]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(v), v = 2]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(v), v = 2]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(v)]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[print(v)]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Execution stack: 
+[]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[2]
+
+Execution stack: 
+[]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[2]
+
+Id:3
+Execution stack: 
+[(bool a; (int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v)))))]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v)))), bool a]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v)))), bool a]
+Symbol table: 
+{}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v))))]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(int v; (a = true; (if(a) then(v = 2) else(v = 3); print(v))))]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v))), int v]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v))), int v]
+Symbol table: 
+{a=false}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v)))]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(a = true; (if(a) then(v = 2) else(v = 3); print(v)))]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v)), a = true]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v)), a = true]
+Symbol table: 
+{a=false, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v))]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[(if(a) then(v = 2) else(v = 3); print(v))]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[print(v), if(a) then(v = 2) else(v = 3)]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[print(v), if(a) then(v = 2) else(v = 3)]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[print(v), v = 2]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[print(v), v = 2]
+Symbol table: 
+{a=true, v=0}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[print(v)]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[print(v)]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[]
+
+Id:3
+Execution stack: 
+[]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[2]
+
+Id:3
+Execution stack: 
+[]
+Symbol table: 
+{a=true, v=2}
+File table : 
+{}
+Heap: 
+{}
+Output list: 
+[2]
+
