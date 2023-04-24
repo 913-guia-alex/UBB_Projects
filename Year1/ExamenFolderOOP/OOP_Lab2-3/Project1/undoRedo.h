@@ -1,5 +1,5 @@
-#ifndef A23_911_GUIA_ALEX_UNDOREDOREPOSITORY_H
-#define A23_911_GUIA_ALEX_UNDOREDOREPOSITORY_H
+#ifndef A23_923_GUIA_ALEX_UNDOREDOREPOSITORY_H
+#define A23_923_GUIA_ALEX_UNDOREDOREPOSITORY_H
 #pragma once
 #include "repository.h"
 
@@ -21,4 +21,4 @@ void popLastRedo(UndoRedoRepository* undo_redo_repo, Repository* repo);
 void resizeArrayUndo(UndoRedoRepository* undo_redo_repo);
 void resizeArrayRedo(UndoRedoRepository* undo_redo_repo);
 
-#endif //A23_911_GUIA_ALEX_UNDOREDOREPOSITORY_H
+#endif //A23_923_GUIA_ALEX_UNDOREDOREPOSITORY_H

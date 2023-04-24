@@ -182,7 +182,7 @@ void start() {
         if (strcmp(option_string, option0) == 0) {
             destroyDynamicArray(&country_list.dynamicArray);
             destroyUndoRedoRepository(&undo_redo_repo);
-            printf("Goodbye!");
+            printf("Program Finish!");
             done = true;
         }
         else if (strcmp(option_string, option1) == 0) {

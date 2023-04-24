@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2ZXm40ZVrMJWi7/QBygVpxwIOuKdgu5RNxYJ4MWLrYN6FR95vaASeVZPGfRF2rE3zhfpk7rliiCMPl4zF1i2jA==",
+  "dgSpecHash": "K7C8bHVmDRS4z4aRlhgWb1HYSfDYjPWvYdTQwWGyl0MHv1QhNtQ/5L25InZBl+diaX0DVVkrzBOliZPhrDPS1w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Anul2\\Sem2\\Medii_de_proiectare_si_programare\\TodoApi2\\TodoApi2.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\UBB_Projects\\Year2\\Sem2\\Medii_de_proiectare_si_programare\\TodoApi2\\TodoApi2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

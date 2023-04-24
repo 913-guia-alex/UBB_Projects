@@ -4,16 +4,16 @@
 void initialiseRepo(Repository* country_list) {
     /// Function to initialise the repository with 10 entries
     /// \param country_list - the repository in which the data is stored
-    Country country1 = createCountry("Bulgaria", "Europe", 6948445);
-    Country country2 = createCountry("South Africa", "Africa", 59734218);
-    Country country3 = createCountry("Vietnam", "Asia", 97338579);
-    Country country4 = createCountry("Germany", "Europe", 83783942);
-    Country country5 = createCountry("Mexico", "America", 128932462);
-    Country country6 = createCountry("Morocco", "Africa", 36910560);
-    Country country7 = createCountry("Ukraine", "Europe", 43733762);
-    Country country8 = createCountry("Spain", "Europe", 46754778);
-    Country country9 = createCountry("Australia", "Australia", 25499884);
-    Country country10 = createCountry("China", "Asia", 1439323776);
+    Country country1 = createCountry("Bulgaria", "Europe", 6948);
+    Country country2 = createCountry("South Africa", "Africa", 5218);
+    Country country3 = createCountry("Vietnam", "Asia", 9733);
+    Country country4 = createCountry("Germany", "Europe", 3942);
+    Country country5 = createCountry("Mexico", "America", 12462);
+    Country country6 = createCountry("Morocco", "Africa", 3560);
+    Country country7 = createCountry("Ukraine", "Europe", 43762);
+    Country country8 = createCountry("Spain", "Europe", 4778);
+    Country country9 = createCountry("Australia", "Australia", 2884);
+    Country country10 = createCountry("China", "Asia", 143936);
     addCountry(country_list, country1);
     addCountry(country_list, country2);
     addCountry(country_list, country3);

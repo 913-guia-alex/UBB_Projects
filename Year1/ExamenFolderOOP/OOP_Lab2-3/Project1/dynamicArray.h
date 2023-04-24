@@ -1,5 +1,5 @@
-#ifndef A23_911_GUIA_ALEX_DYNAMIC_ARRAY_H
-#define A23_911_GUIA_ALEX_DYNAMIC_ARRAY_H
+#ifndef A23_923_GUIA_ALEX_DYNAMIC_ARRAY_H
+#define A23_923_GUIA_ALEX_DYNAMIC_ARRAY_H
 #pragma once
 #include "domain.h"
 
@@ -19,4 +19,4 @@ int arrayCapacity(DynamicArray* array);
 int arrayLength(DynamicArray* array);
 
 
-#endif //A23_911_GUIA_ALEX_DYNAMIC_ARRAY_H
+#endif //A23_923_GUIA_ALEX_DYNAMIC_ARRAY_H

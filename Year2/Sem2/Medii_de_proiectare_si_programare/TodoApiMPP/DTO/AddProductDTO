@@ -1,0 +1,24 @@
+using System.Runtime.CompilerServices;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text;
+using TodoApiMPP.Models;
+
+namespace TodoApiMPP.DTO
+{
+    public class AddProductDTO
+    {
+        [Required]
+        public string? Name { get; set; }
+        [Required]
+        public int Price { get; set; }
+        [Required]
+        public string? Type { get; set; }
+        [Required]
+        public string? MadeDate { get; set; }
+        [Required]
+        public string? ExpirationDate { get; set; }
+    }
+}

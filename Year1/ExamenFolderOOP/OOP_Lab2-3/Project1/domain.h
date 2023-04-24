@@ -1,5 +1,5 @@
-#ifndef A23_911_GUIA_ALEX_DOMAIN_H
-#define A23_911_GUIA_ALEX_DOMAIN_H
+#ifndef A23_923_GUIA_ALEX_DOMAIN_H
+#define A23_923_GUIA_ALEX_DOMAIN_H
 #pragma once
 
 typedef struct {
@@ -14,4 +14,4 @@ char* getContinent(Country* c);
 unsigned long int getPopulation(Country* c);
 void toString(Country c, char str[]);
 
-#endif //A23_911_GUIA_ALEX_DOMAIN_H
+#endif //A23_923_GUIA_ALEX_DOMAIN_H

@@ -1,0 +1,25 @@
+Lab1:::::::::::::::::::
+
+Use Trello-type tool for tasks
+Work acording to Agile and Scrum methodologies
+The Book!
+
+Software Development Life Cycle::::::::::
+
+Requirement Analysis->Design->
+^			     |
+|			     V
+<-Evolution<-Testing<-Implementation
+
+Requirements Elicitation
+->the client and developers define the purpose of
+the system
+->the result of this activity is a description of
+the system in terms of actors and use cases
+
+Star UML
+VisualParadigm
+
+
+
+

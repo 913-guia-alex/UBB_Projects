@@ -1,0 +1,26 @@
+	    Data Adapter
+SQL SERVER ------------->C# App(Data Set)
+Tables(RCC)+ 
+RelationShip
+
+Data Adapter -> extract from SQL Server(Select,  Insert , Delete , Update)
+Populate in the Data Set with Data Adapter
+
+
+Data Binding - Windows Forms::::::::::::::::::::::::::::::::
+
+Windows Form
+^
+|
+|
+v		|->Currency Manager <--> Array
+Binding Context -->Currency Manager <--> Collection
+		|->Currency Manager <--> Data Table
+
+
+
+
+
+
+
+

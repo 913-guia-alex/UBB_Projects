@@ -1,0 +1,3 @@
+﻿  service.cpp
+C:\Users\Admin\source\repos\Test1OOP\Test1OOP\service.cpp(18): warning C4715: 'Service::addBillServ': not all control paths return a value
+  Test1OOP.vcxproj -> C:\Users\Admin\source\repos\Test1OOP\x64\Debug\Test1OOP.exe

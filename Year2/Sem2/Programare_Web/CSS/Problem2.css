@@ -1,0 +1,35 @@
+.stairs-container {
+  height: 500px;
+  width: 500px;
+  perspective: 800px;
+  transform: rotateX(45deg) rotateZ(-10deg);
+  margin: 100px auto;
+}
+
+.stair {
+  position: absolute;
+  width: 400px;
+  height: 50px;
+  background-color: #cccccc;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stair1 {
+  bottom: 0;
+  transform: translateZ(0);
+}
+
+.stair2 {
+  bottom: 50px;
+  transform: translateZ(-50px);
+}
+
+.stair3 {
+  bottom: 100px;
+  transform: translateZ(-100px);
+}
+
+.stair4 {
+  bottom: 150px;
+  transform: translateZ(-150px);
+}

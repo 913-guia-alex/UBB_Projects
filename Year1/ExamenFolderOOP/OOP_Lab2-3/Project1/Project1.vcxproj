@@ -134,6 +134,7 @@
     </ClCompile>
     <ClCompile Include="repository.c" />
     <ClCompile Include="service.c" />
+    <ClCompile Include="tests.c" />
     <ClCompile Include="ui.c" />
     <ClCompile Include="undoRedo.c" />
   </ItemGroup>
@@ -143,6 +144,7 @@
     <ClInclude Include="main.h" />
     <ClInclude Include="repository.h" />
     <ClInclude Include="service.h" />
+    <ClInclude Include="tests.h" />
     <ClInclude Include="ui.h" />
     <ClInclude Include="undoRedo.h" />
   </ItemGroup>
