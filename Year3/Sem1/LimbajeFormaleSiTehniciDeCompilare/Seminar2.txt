@@ -1,0 +1,64 @@
+Programming Languages’ Specification_______________________________________
+
+Notations (meta-languages)
+
+I.BNF (Backus-Naur Form)
+
+	Constructs:
+		    1. Meta-linguistic variables (non-terminals) - written 			between < >
+		    2. Language primitives (terminals) - written as they are, 			no special delimiters
+ 		    3. Meta-linguistic connectors
+			a. ::= equals by definition
+			b. | alternative (OR)
+
+
+
+Ex.1: Specify, using BNF, all nonempty sequences of letters
+
+
+<NonEmptyLetterSequence> ::= <Letter> / <Letter><NonEmptyLetterSequence>									(recursiv)
+<Letter> ::= a|b|c|...|z|A|B|C|...|Z
+
+
+Ex.2: Specify, using BNF, both signed and unsigned integers, with the following constraints:
+	· 0 does not have a sign
+	· numbers of at least two digits cannot start with 0
+
+
+<Zero> ::= 0
+<NonzeroDigits> ::= 1|2|3|...|9
+<Signs> ::= +|-
+<Digit> ::= <Zero> / <NonzeroDigits> 
+<DigitSequence> ::= <Digit> / <Digit><DigitSequence>
+<AbsVal> ::= <NonzeroDigit> / <NonzeroDigit><DigitSequence>
+<Int> ::= <Zero> / <AbsVal> / <Signs><AbsVal>
+
+
+
+II.EBNF (Extended BNF)
+	Wirth's dialect
+		1. Changes to the concrete syntax of standard BNF
+		   · Nonterminals lose <> => they are written without delimiters
+		   · Terminals are written between " "
+		   · ::= becomes =
+
+		2. New constructs
+		   · { } - repetition 0 or more times
+		   · [ ] - optionality (0 or 1)
+		   · ( ) - math grouping
+		   · (* *) - comments
+		   · rules end with .
+
+
+Ex.3: Ex. 2 reloaded, in EBNF
+
+
+int = ["+","-"] non_zero{digit} \ "0"
+digit = non_zero / "0"
+non_zero = "1" | ... | "9"
+
+
+
+
+
+

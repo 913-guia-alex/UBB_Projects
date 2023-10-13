@@ -1,0 +1,45 @@
+Course1_________________
+
+60% exam >5
+30% lab  >6
+10% 
+
+Input -> Source Cod(programming language)
+|
+-->Compiler(transforms/translate/interpreter)--->Object Code
+
+Source Code-->Scanning/Lexical Analysis
+			|PIF+ST
+			|
+			----> Parse/Syntactical Analysis
+				|Syntax Tree
+				|
+				----> Sematical Analysis
+					| Adinotated Syntax Tree
+					|
+					---->Generation Of Intermediate Code
+						|Intermediate Code
+						|
+						---->Optimization of Intermediate Code
+							|Opt.Int. Code
+							|
+							---->Generalization og object code----->Object Code
+
+Simple Table Management -> Constructs the Simple Table
+
+Error Handling
+
+
+Scanning_____
+
+input: text/sequence of characters
+output: PIF,ST
+
+Algoritm Scanning will say : while not endof(f)
+				detect(token)
+				classify(token)
+				codify(token)
+			     end while
+
+Key Word is different from Rezerved Word
+

@@ -1,0 +1,53 @@
+
+Lecture 1_________________________________
+
+
+Concurrent -> several tasks in execution at the same time ; task2 starts before task1 ends
+
+Parallel -> there are several processing units that work simultaneously 
+
+Distributed -> the processing units are spatially distributed
+
+Why?
+	1. optimize resource uitlization	
+	2. increase computing power
+	3. integrating local systems
+	4. redundancy
+
+Wny not?
+	1. increase complexity
+	2. race conditions
+	3. deadlocks
+	4. non-determinism
+	5. lack of global state
+
+Clasification
+
+	Flynn taxonomy
+	   |
+	   --->	SISD(single instruction , single data)
+		SIMD(single instruction , multiple data)
+		MISD(multiple instruction , single data)
+		MIMD(multiple instruction , multiple data)
+
+	Shared Memory vs Message passing
+		|
+		---> Shared Memory --> SMP(symmetrical multi-processing)
+		|		       AMP(asymmetrical multi-processing)
+		|		       NUMA(nun-uniform memory access)
+		|
+		---> Message passing --> cluster
+					 grid
+
+
+Lecture 2__________________________________
+
+
+Memory caches
+	->Problems : high memory latency ; memory bottleneck
+	->Solution : use per-processor cache
+
+See drawing Lecture 2
+
+
+

@@ -1,0 +1,20 @@
+Some Complexity Theory and Number Theory_______________________
+
+	1. Complex Theory:
+		RunningTimes.
+		Big O Notation ComplexityClasses
+		ComplexityClasses
+	2. Some Number Theory
+		The Euclidean Algorithm 
+		Congruences Modulo n 
+		Euler’s Function 						Repeated Squaring Modular Exponentiation
+
+Size of an input : the total number of bits needed to represent it in 		   the usual binary notation.
+
+
+
+
+
+
+
+

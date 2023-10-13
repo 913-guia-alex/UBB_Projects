@@ -1,0 +1,58 @@
+Classical Cryptography::
+
+	1.Coordinates and Bibliography
+	2.Some Simple Cryptography
+	3.Cryptoanalysis
+
+				
+				1.Coordinates
+
+
+@RSA
+@Rabin
+@El Gamal
+@Elliptic Curves
+
+
+Cryprology------->Cryptoanalysis
+   |
+   ----->Cryptography
+	|		|		|
+	|		|		|
+Synmentic Ciphens  Asymmentic Ciphens	Protocols
+|		|
+|		|
+Block Ciphens   Stream Ciphens
+
+
+Cryptosystem: 5-tuple(P,C,K,E,D)
+	P->set of possible paintext characters/blocks(non-cripted text)
+	C->set of possible ciphertext characters/blocks(cripted text)
+	K->set of possible keys(most of the time numbers , may be functions etc)
+
+	eK:P->C ; dK:C->P ; 
+	dK(eK(x)):x (if you encript and the descript a message you should get the initial text)
+
+
+Example: n=27 ; K=10
+
+
+_ A B C D ......... X  Y  Z
+
+0 1 2 3 4 ......... 24 25 26
+
+PlainText: first_example
+Numerical: 6 9 18 19 20 0 5 24 1 13 16 12 5
+Encryption: 16 19 1 2 3 10 15 7 11 23 26 22 15--| (This is (Numerical+K)(mod n))
+Ciphertext:PSABCJOGKWZVO		<-------|
+
+
+
+
+
+
+
+
+
+
+
