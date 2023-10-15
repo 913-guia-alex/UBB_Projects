@@ -1,0 +1,54 @@
+						**Project Idea**
+
+1. **A Short Description:**
+
+This mobile application will assist our customers in creating gym memberships. 
+The customer will be able to perform CRUD operations on the memberships (more on that later). 
+When the application is launched, the customer will see all the gym memberships they have, can 	create new ones, and delete those that are no longer needed. 
+There will also be a feature to extend memberships that are about to expire by one month.
+
+2. **Domain Details:**
+
+The domain details for the gym membership are as follows:
+
+- First Name -> The first name of the customer
+- Last Name -> The last name of the customer
+- Email -> The email for future validation
+- Creation Date -> The date when the gym membership was created
+- Expiration Date -> The date when the gym membership will expire
+- Gym Name -> The gym that the customer wants to obtain a membership for
+
+3. **CRUD Operations:**
+
+This means that a customer can:
+
+- Create a brand new membership for a gym (Create).
+- See all the gyms they are a part of at any time (Read).
+- Update an existing membership and extend its duration (Update).
+- Delete the membership if the customer decides not to go to that gym anymore (Delete).
+
+When the application is launched for the first time, the customer will see an "CREATE" button where they can create a gym membership for the desired gym. At any time, on the first page of the application, the user will see all their memberships for all the gyms they go to. When the customer wants to extend the subscription, a "UPDATE" button will be available for running subscriptions, adding one month to the subscription. When a customer wants to delete a gym membership, a simple "DELETE" button near the gym membership will be available.
+
+4. **Persistence Details:**
+
+All CRUD operations are persisted on the local database and on the server:
+
+- Create: It creates a new gym membership entity in the local database and stores its details.
+- Read: It's a getter function that retrieves all the gym memberships from the database for the customer.
+- Update: It's a setter that allows the customer to change the expiration date for the gym membership.
+- Delete: It's a deletion button that removes the gym membership from the local database if selected.
+
+5. **Offline Operation:**
+
+What will happen to the CRUD operations if the device is offline:
+
+- Create: The creation of a new gym membership will fail, and the customer will be redirected to the first page of the application.
+- Read: The list of gym memberships will not be displayed, and the first page of the application will not load.
+- Update: The update will not go through, and the date will remain the same. The customer will be redirected to the first page of the app.
+- Delete: The gym membership will not be deleted from the local database, and the customer will be redirected to the first page of the app.
+
+
+
+
+
+
