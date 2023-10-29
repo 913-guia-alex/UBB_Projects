@@ -1,0 +1,34 @@
+<!-- activity_membership.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etMemberName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Member Name" />
+
+    <Button
+        android:id="@+id/btnAddMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Membership" />
+
+    <Button
+        android:id="@+id/btnDeleteMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete Membership"
+        android:layout_below="@id/btnAddMembership"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnUpdateMembership"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update Membership"
+        android:layout_below="@id/btnDeleteMembership"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
