@@ -6,7 +6,7 @@ import 'package:test_app_package/DataBaseProvider/database_provider.dart';
 
 class MembershipManager {
   static final DatabaseProvider _databaseProvider = DatabaseProvider.instance;
-  static int? _lastMembershipId; // Make it nullable
+  static int? _lastMembershipId;
 
   static Future<void> initialize() async {
     _lastMembershipId = await _databaseProvider.getLastMembershipId() ?? 0;
