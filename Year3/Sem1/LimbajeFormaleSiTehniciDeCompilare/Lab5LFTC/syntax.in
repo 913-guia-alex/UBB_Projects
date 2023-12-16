@@ -1,0 +1,35 @@
+program ::= "prog" "{" statemelist "}"
+
+declaration ::= IDENTIFIER "(" type ")" [","] {declaration}
+type1 ::= "boolean" | "integer" | "string"
+vectordecl ::= "vec" "(" type1 "[" INTCONST "]" ")"
+type ::= type1 | vectordecl
+
+statementlist ::= statement | statement ";" statementlist
+statement ::= simplestatement | structstatement
+
+simplestatement ::= assignstatement | iostatement | declaration
+
+assignstatement ::= IDENTIFIER "=" expression
+expression ::= term {"+" term | "-" term}
+term ::= factor {"*" factor | "/" factor}
+factor ::= "(" expression ")" | IDENTIFIER | CONST
+
+iostatement::= "read" "(" IDENTIFIER ")" | "write" "(" IDENTIFIER ")" | "write" "(" CONST ")"
+
+structstatement ::= statementlist | ifstatement | whilestatement
+
+ifstatement ::= "if" condition "{" statementlist "}" ["else" "{" statementlist "}"]
+whilestatement ::= "while" condition "{" statementlist "}"
+
+condition ::= expression RELATION expression
+RELATION ::= "<" | "<=" | "==" | "<>" | ">=" | ">"
+
+IDENTIFIER ::= identifier
+
+identifier ::= (letter|"_"){letter|digit|"_"}
+letter ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
+digit ::= "0" | "1" | ... | "9"
+int_constant ::= ["+" | "-"] non_zero_digit {digit} | "0"
+non_zero_digit ::= "1" | "2" | ... | "9"
+string_constant ::= """{letter|digit|"_"|" "}"

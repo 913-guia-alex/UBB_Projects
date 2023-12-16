@@ -1,0 +1,12 @@
+integer n
+integer sum
+vector v = []
+
+read(n)
+
+for(integer i=1 ; i<=n ; i++)
+   {
+   read(v[i])
+   sum = sum+v[i]
+   }
+write(sum)

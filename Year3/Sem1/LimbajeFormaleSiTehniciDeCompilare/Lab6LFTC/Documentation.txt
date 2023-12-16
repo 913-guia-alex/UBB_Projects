@@ -1,0 +1,56 @@
+                                               Grammar
+
+
+Attributes:
+    - N (list): List of non-terminals.
+    - E (list): List of terminals.
+    - S (str): Starting symbol.
+    - P (dict): Dictionary representing productions. Keys are non-terminals, and values are lists of
+               production sequences.
+
+Constants:
+    - EPSILON (str): Represents the epsilon symbol in the grammar.
+
+Methods:
+    - __init__(self)
+        Initializes the Grammar class with empty sets/lists and an empty dictionary for productions.
+    - __processLine(self, line: str) -> List
+        Helper function to process a line and extract what comes after the '='.
+    - readFromFile(self, file_name: str) -> None
+        Reads the grammar from a file and populates the Grammar class attributes.
+    - checkCFG(self) -> bool
+        Checks if the provided grammar is a valid Context-Free Grammar (CFG).
+    - __str__(self) -> str
+        Returns a string representation of the Grammar object.
+
+
+
+                                RecursiveDescentParser
+
+
+Attributes:
+    - grammar (Grammar): The Grammar object used for parsing.
+    - input_string (str): The input string to parse.
+    - index (int): The current index while parsing the input string.
+
+Methods:
+    - __init__(self, grammar: Grammar)
+        Initializes the RecursiveDescentParser object with a provided grammar.
+    - expand(self, non_terminal: str) -> bool
+        Expands a non-terminal based on the grammar rules.
+    - try_production(self, production: list) -> bool
+        Tries to match the current input against a production.
+    - advance(self) -> None
+        Advances the parser's index to the next input symbol.
+    - momentary_insuccess(self) -> None
+        Handles momentary insuccess by resetting the parser's index.
+    - back(self) -> None
+        Backtracks the parser by decrementing the index.
+    - another_try(self) -> bool
+        Performs another try by resetting the index and attempting to parse again.
+    - success(self) -> bool
+        Checks if the parser successfully parsed the entire input.
+    - parse(self) -> bool
+        Main parsing function. Parses the input string using the provided grammar.
+    - parse_input(self, input_string: str) -> bool
+        Parses the input string using the Recursive Descent Parser.

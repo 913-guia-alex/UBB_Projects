@@ -1,0 +1,18 @@
+"""
+def main():
+    # Example usage:
+    grammar = Grammar()
+    grammar.readFromFile("g1.in")  # Replace with your actual grammar file
+    parser = RecursiveDescentParser(grammar)
+
+    input_strings = ["a444__"]  # Replace with your input strings
+    for input_string in input_strings:
+        if parser.parse_input(input_string):
+            print(f"Parsing successful for input string '{input_string}'!")
+        else:
+            print(f"Parsing failed for input string '{input_string}'.")
+
+if __name__ == "__main__":
+    main()
+
+"""

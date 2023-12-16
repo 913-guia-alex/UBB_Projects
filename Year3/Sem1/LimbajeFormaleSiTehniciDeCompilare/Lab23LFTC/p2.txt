@@ -1,0 +1,24 @@
+integer a
+boolean OK=0
+
+read (a)
+
+if(a<2)
+   {
+   OK=1
+   write("a is not a prime number")
+   }
+elseif(a==2)
+   {
+   OK=1
+   write("a is a prime number")
+   }
+else
+   for(integer i=2 ; i<=a/2 ; i++)
+	if(a%i==0){
+	   OK=1
+	   write("a is not a prime number")
+	   break
+	   }
+if(OK==0)
+   write("a is a prime number")

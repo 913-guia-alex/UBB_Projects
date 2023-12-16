@@ -1,0 +1,22 @@
+                                               Grammar
+Attributes:
+    - N (list): List of non-terminals.
+    - E (list): List of terminals.
+    - S (str): Starting symbol.
+    - P (dict): Dictionary representing productions. Keys are non-terminals, and values are lists of
+               production sequences.
+
+Constants:
+    - EPSILON (str): Represents the epsilon symbol in the grammar.
+
+Methods:
+    - __init__(self)
+        Initializes the Grammar class with empty sets/lists and an empty dictionary for productions.
+    - __processLine(self, line: str) -> List
+        Helper function to process a line and extract what comes after the '='.
+    - readFromFile(self, file_name: str) -> None
+        Reads the grammar from a file and populates the Grammar class attributes.
+    - checkCFG(self) -> bool
+        Checks if the provided grammar is a valid Context-Free Grammar (CFG).
+    - __str__(self) -> str
+        Returns a string representation of the Grammar object.
