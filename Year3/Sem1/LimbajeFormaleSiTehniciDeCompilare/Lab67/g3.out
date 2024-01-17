@@ -1,0 +1,13 @@
+Sequence: ['a', 'c', 'd', 'b', 'c', 'd']
+index           info(alpha)     parent(index_m) right sibling(beta)
+1               S               -               -              
+2               a               1               -              
+3               S               1               2              
+4               b               1               3              
+5               S               1               4              
+6               c               3               -              
+7               B               3               6              
+8               d               5               -              
+9               c               7               -              
+10              B               7               9              
+11              d               10              -              
